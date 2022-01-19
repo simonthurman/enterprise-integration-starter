@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "vnetName": {
-      "value": "vnet-eis-dev-auea"
+      "value": "eis-vnet"
     },
     "subnets": {
       "value": {

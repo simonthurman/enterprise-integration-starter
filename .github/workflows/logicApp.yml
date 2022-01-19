@@ -4,8 +4,8 @@
 name: Build and Deploy Logic App
 
 env:
-  LA_NAME: 'logic-eis-dev-auea'
-  APIM_NAME: 'apim-eis-dev-auea'
+  LA_NAME: 'eis-logic-app'
+  APIM_NAME: 'eis-apim'
   WORKFLOW_NAME: 'eisHttpRequest'
 on:
   workflow_dispatch:
