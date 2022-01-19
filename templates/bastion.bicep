@@ -41,7 +41,5 @@ resource bastion 'Microsoft.Network/bastionHosts@2021-02-01' = {
       }
     ]  
   }
-  dependsOn: [
-    vnet
-  ]
+  
 }

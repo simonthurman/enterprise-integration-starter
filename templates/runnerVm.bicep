@@ -89,7 +89,5 @@ resource selfHostedRunnerVm 'Microsoft.Compute/virtualMachines@2019-07-01' = {
       ]
     }
   }
-  dependsOn: [
-    selfHostedRunnerNic
-  ]
+
 }
