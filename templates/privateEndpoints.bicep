@@ -35,7 +35,6 @@ module privateEndpointLogicAppModule './networkingPrivateEndpoint.bicep' = {
     defaultSubnetName: defaultSubnetName
   }
   dependsOn: [
-    vnet
     defaultSubnet
   ]
 }
@@ -57,7 +56,6 @@ module privateEndpointStorageBlobModule './networkingPrivateEndpoint.bicep' = {
     defaultSubnetName: defaultSubnetName
   }
   dependsOn: [
-    vnet
     defaultSubnet
   ]
 }
