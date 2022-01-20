@@ -64,9 +64,7 @@ jobs:
         uses: azure/powershell@v1
         with:
           inlineScript: |
-            $profile = Get-AzWebAppPublishingProfile `
-                -ResourceGroupName ${{ secrets.AZURE_RESOURCE_GROUP_DEV }} `
-                -Name ${{ secrets.LOGIC_APP_NAME_DEV }}
+            $profile = Get-AzWebAppPublishingProfile -ResourceGroupName ${{ secrets.AZURE_RESOURCE_GROUP_DEV }} -Name ${{ secrets.LOGIC_APP_NAME_DEV }}
             $profile = $profile.Replace("`r", "").Replace("`n", "")
             Write-Output "::set-output name=profile::$profile"
           azPSVersion: latest
