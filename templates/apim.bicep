@@ -95,9 +95,6 @@ resource logicAppApiSchema 'Microsoft.ApiManagement/service/apis/schemas@2021-01
     contentType: 'application/vnd.ms-azure-apim.swagger.definitions+json'
     document: {}
   }
-  dependsOn: [
-    apim
-  ]
 }
 
 resource logicAppApiOperation 'Microsoft.ApiManagement/service/apis/operations@2021-01-01-preview' = {
@@ -118,7 +115,6 @@ resource logicAppApiOperation 'Microsoft.ApiManagement/service/apis/operations@2
           contentType: 'application/json'
           schemaId: logicAppSchemaId
           typeName: 'request-request'
-          sample: '{}'
         }
       ]
     }
@@ -131,7 +127,6 @@ resource logicAppApiOperation 'Microsoft.ApiManagement/service/apis/operations@2
             contentType: 'application/json'
             schemaId: logicAppSchemaId
             typeName: 'RequestPathsInvokePost200ApplicationJsonResponse'
-            sample: '{}'
           }
         ]
         headers: []
@@ -144,7 +139,6 @@ resource logicAppApiOperation 'Microsoft.ApiManagement/service/apis/operations@2
             contentType: 'application/json'
             schemaId: logicAppSchemaId
             typeName: 'RequestPathsInvokePost500ApplicationJsonResponse'
-            sample: '{}'
           }
         ]
         headers: []
@@ -152,7 +146,6 @@ resource logicAppApiOperation 'Microsoft.ApiManagement/service/apis/operations@2
     ]
   }
   dependsOn: [
-    apim
     logicAppApiSchema
   ]
 }
@@ -165,7 +158,6 @@ resource logicAppApiPolicy 'Microsoft.ApiManagement/service/apis/policies@2021-0
     format: 'xml'
   }
   dependsOn: [
-    apim
     logicAppBackend
   ]
 }
@@ -178,8 +170,6 @@ resource logicAppApiOperationPolicy 'Microsoft.ApiManagement/service/apis/operat
     format: 'xml'
   }
   dependsOn: [
-    logicAppApi
-    apim
     logicAppServiceProperty
   ]
 }
